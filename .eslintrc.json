@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+    "import/extensions": ["error", "never", {
+      "png": "always",
+      "jpg": "always",
+      "jpeg": "always",
+      "svg": "always"
+    }],
+    "no-promise-executor-return": "off"
+  }
+}

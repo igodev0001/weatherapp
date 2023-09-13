@@ -1,0 +1,23 @@
+{
+  "plugins": ["stylelint-order"],
+  "extends": ["stylelint-config-standard"],
+  "overrides": [
+    {
+      "files": [
+        "**/*.styles.js",
+        "**/*.styles.ts",
+        "**/*.styles.jsx",
+        "**/*.styles.tsx",
+        "**/styles.js",
+        "**/styles.ts",
+        "**/styles.jsx",
+        "**/styles.tsx"
+      ],
+      "customSyntax": "postcss-styled-components"
+    }
+  ],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "value-keyword-case": ["lower", {"ignoreKeywords": ["/^POSTCSS.*/"]}]
+  }
+}
