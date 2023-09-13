@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Average = styled.h3`
   font-size: 1.5rem;
@@ -46,7 +47,7 @@ export const Temperature = styled.h1`
   top: 35%;
 `;
 
-export const Texture = styled.img`
+export const Texture = styled(motion.img)`
   background-size: cover;
   height: 100%;
   object-fit: cover;

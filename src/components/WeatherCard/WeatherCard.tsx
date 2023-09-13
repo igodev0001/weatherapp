@@ -14,7 +14,19 @@ export default function WeatherCard() {
         <S.Average>58º / 61º</S.Average>
         <S.Location>Recife, PE</S.Location>
 
-        <S.Texture src={cloudTexture} />
+        <S.Texture
+          whileInView={{
+            scale: [1, 1.5, 1],
+            x: [0, 50, 0],
+            transition: {
+              duration: 30,
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatType: 'loop',
+            },
+          }}
+          src={cloudTexture}
+        />
       </S.Container>
     </S.Wrapper>
   );
