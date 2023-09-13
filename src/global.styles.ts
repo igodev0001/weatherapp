@@ -2,12 +2,13 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const Overall = createGlobalStyle`
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   body {
+    font-family: Nunito, Ubuntu, sans-serif;
     height: 100vh;
   }
 `;
