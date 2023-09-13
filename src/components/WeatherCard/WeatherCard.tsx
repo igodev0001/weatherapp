@@ -1,6 +1,6 @@
 import React from 'react';
 import cloudTexture from '@assets/images/cloud_texture.png';
-import clouds from '@assets/images/clouds.png';
+import clouds from '@assets/svgs/clouds.svg';
 
 import * as S from './styles';
 
