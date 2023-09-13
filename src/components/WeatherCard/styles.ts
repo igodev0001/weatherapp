@@ -12,9 +12,21 @@ export const Container = styled.div`
   display: flex;
   flex-flow: column;
   height: 24rem;
+  overflow: hidden;
   position: relative;
+  mix-blend-mode: multiply;
   justify-content: center;
   width: 20rem;
+`;
+
+export const Clouds = styled.img`
+  background-size: cover;
+  height: 150%;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  width: 150%;
+  z-index: -10;
 `;
 
 export const Temperature = styled.h1`
