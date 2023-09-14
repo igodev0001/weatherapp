@@ -26,9 +26,21 @@ export const Action = styled(motion.button)`
   }
 `;
 
+export const Content = styled.div`
+  align-items: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  h3,
+  h5 {
+    height: 1.25rem;
+  }
+`;
+
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #a6bde0;
   border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),

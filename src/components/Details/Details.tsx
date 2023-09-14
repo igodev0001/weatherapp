@@ -45,26 +45,26 @@ export default function Details() {
             variants={rootVariants}
           >
             <S.Detail variants={childrenVariants}>
-              <div>
+              <S.Content>
                 <h5>Vento</h5>
                 <h3>17km/h</h3>
-              </div>
+              </S.Content>
               <BiWind />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <div>
+              <S.Content>
                 <h5>Umidade</h5>
                 <h3>31%</h3>
-              </div>
+              </S.Content>
               <MdOutlineWaterDrop />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <div>
+              <S.Content>
                 <h5>Chuva</h5>
                 <h3>10%</h3>
-              </div>
+              </S.Content>
               <BsCloudLightningRainFill />
             </S.Detail>
           </S.Wrapper>
