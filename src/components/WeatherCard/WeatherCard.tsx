@@ -9,10 +9,11 @@ export default function WeatherCard() {
     <S.Wrapper>
       <S.Clouds
         src={clouds}
-        initial={{ opacity: 0, x: -40 }}
+        initial={{ opacity: 0, x: -40, scale: 1.5 }}
         animate={{
           opacity: 1,
           x: 0,
+          scale: 1,
           transition: { delay: 0.4 },
         }}
       />

@@ -28,6 +28,8 @@ export default function Details() {
   return (
     <>
       <S.Action
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, transition: { delay: 1 } }}
         whileTap={{ scale: 0.8 }}
         onClick={() => setShowDetails((prevState) => !prevState)}
       >
