@@ -12,6 +12,7 @@ export const Overall = createGlobalStyle`
     color: #2a2a2a;
     font-family: Nunito, Ubuntu, sans-serif;
     height: 100vh;
+    overflow: hidden;
   }
 `;
 
