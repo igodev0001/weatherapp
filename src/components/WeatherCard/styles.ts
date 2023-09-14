@@ -16,7 +16,7 @@ export const Clouds = styled.img`
   z-index: 10;
 `;
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   align-items: center;
   background-color: #d9d9d9;
   border-radius: 0.5rem;

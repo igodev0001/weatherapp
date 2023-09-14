@@ -9,7 +9,7 @@ export default function SearchBar() {
       initial={{ scaleX: 0 }}
       animate={{
         scaleX: 1,
-        transition: { delay: 0.2, duration: 0.4, type: 'spring', bounce: 0.35 },
+        transition: { delay: 0.4, duration: 0.4, type: 'spring', bounce: 0.35 },
       }}
     >
       <S.Input type="text" />

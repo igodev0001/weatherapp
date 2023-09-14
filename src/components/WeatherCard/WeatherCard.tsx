@@ -9,7 +9,10 @@ export default function WeatherCard() {
     <S.Wrapper>
       <S.Clouds src={clouds} />
 
-      <S.Container>
+      <S.Container
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, transition: { delay: 0.2 } }}
+      >
         <S.Temperature>60º</S.Temperature>
         <S.Average>58º / 61º</S.Average>
         <S.Location>Recife, PE</S.Location>
