@@ -5,9 +5,15 @@ import * as S from './styles';
 
 export default function SearchBar() {
   return (
-    <S.Container>
+    <S.Container
+      initial={{ scaleX: 0 }}
+      animate={{
+        scaleX: 1,
+        transition: { delay: 0.2, duration: 0.4, type: 'spring', bounce: 0.35 },
+      }}
+    >
       <S.Input type="text" />
-      <S.SearchBtn>
+      <S.SearchBtn initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <BiSearch />
       </S.SearchBtn>
     </S.Container>

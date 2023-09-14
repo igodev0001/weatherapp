@@ -27,10 +27,10 @@ export const Input = styled.input`
   height: 2.5rem;
   outline: none;
   padding: 0.75rem;
-  width: 80%;
+  width: 90%;
 `;
 
-export const SearchBtn = styled.button`
+export const SearchBtn = styled(motion.button)`
   align-items: center;
   background: none;
   border: none;
