@@ -10,8 +10,8 @@ export const Action = styled(motion.button)`
   flex-flow: column;
   height: 2.5rem;
   justify-content: center;
-  margin-top: 2rem;
   margin-left: 20rem;
+  margin-top: 2rem;
   position: absolute;
   width: 2.5rem;
   z-index: 10;
