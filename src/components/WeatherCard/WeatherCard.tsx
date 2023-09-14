@@ -7,9 +7,21 @@ import * as S from './styles';
 export default function WeatherCard() {
   return (
     <S.Wrapper>
-      <S.Clouds src={clouds} />
+      <S.Clouds
+        src={clouds}
+        initial={{ opacity: 0, x: -40, scale: 1.5 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          transition: { delay: 0.2 },
+        }}
+      />
 
-      <S.Container>
+      <S.Container
+        initial={{ scale: 0, y: 1000 }}
+        animate={{ scale: 1, y: 0, transition: { delay: 0.2 } }}
+      >
         <S.Temperature>60º</S.Temperature>
         <S.Average>58º / 61º</S.Average>
         <S.Location>Recife, PE</S.Location>

@@ -8,7 +8,7 @@ export const Average = styled.h3`
   top: 55%;
 `;
 
-export const Clouds = styled.img`
+export const Clouds = styled(motion.img)`
   height: 4rem;
   left: -3rem;
   position: absolute;
@@ -16,7 +16,7 @@ export const Clouds = styled.img`
   z-index: 10;
 `;
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   align-items: center;
   background-color: #d9d9d9;
   border-radius: 0.5rem;
@@ -55,6 +55,7 @@ export const Texture = styled(motion.img)`
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  user-select: none;
   width: 150%;
   z-index: -10;
 `;

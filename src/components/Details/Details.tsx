@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, Variants } from 'framer-motion';
 import { BiWind } from 'react-icons/bi';
 import { BsCloudLightningRainFill } from 'react-icons/bs';
 import { MdOutlineWaterDrop } from 'react-icons/md';
 import { TbListDetails } from 'react-icons/tb';
 
-import * as S from './styled';
+import * as S from './styles';
 
 const rootVariants: Variants = {
   initial: { opacity: 0 },
@@ -24,15 +24,31 @@ const childrenVariants: Variants = {
 
 export default function Details() {
   const [showDetails, setShowDetails] = useState(false);
+  const [showAction, setShowAction] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAction(true);
+    }, 1500);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <>
-      <S.Action
-        whileTap={{ scale: 0.8 }}
-        onClick={() => setShowDetails((prevState) => !prevState)}
-      >
-        <TbListDetails />
-      </S.Action>
+      {showAction && (
+        <S.Action
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+          onClick={() => setShowDetails((prevState) => !prevState)}
+        >
+          <TbListDetails />
+        </S.Action>
+      )}
 
       <AnimatePresence>
         {showDetails && (
@@ -43,26 +59,26 @@ export default function Details() {
             variants={rootVariants}
           >
             <S.Detail variants={childrenVariants}>
-              <div>
-                <h5>Vento</h5>
+              <S.Content>
+                <h5>Wind</h5>
                 <h3>17km/h</h3>
-              </div>
+              </S.Content>
               <BiWind />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <div>
-                <h5>Umidade</h5>
+              <S.Content>
+                <h5>Umidity</h5>
                 <h3>31%</h3>
-              </div>
+              </S.Content>
               <MdOutlineWaterDrop />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <div>
-                <h5>Chuva</h5>
+              <S.Content>
+                <h5>Rain</h5>
                 <h3>10%</h3>
-              </div>
+              </S.Content>
               <BsCloudLightningRainFill />
             </S.Detail>
           </S.Wrapper>

@@ -3,21 +3,21 @@ import { motion } from 'framer-motion';
 
 export const Action = styled(motion.button)`
   align-items: center;
-  background-color: '#fff';
+  background-color: #2a2a2a;
   border: none;
   border-radius: 100%;
   display: flex;
   flex-flow: column;
   height: 2.5rem;
   justify-content: center;
-  margin-top: 2rem;
   margin-left: 20rem;
+  margin-top: 2rem;
   position: absolute;
   width: 2.5rem;
   z-index: 10;
 
   svg {
-    color: #131313;
+    color: #f9f9f9;
     font-size: 1.25rem;
   }
 
@@ -26,10 +26,26 @@ export const Action = styled(motion.button)`
   }
 `;
 
+export const Content = styled.div`
+  align-items: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  h3,
+  h5 {
+    color: #b9d2f6;
+    height: 1.25rem;
+  }
+`;
+
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #99adcc;
+  background-color: #2a2a2a;
   border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
   display: flex;
   gap: 1rem;
   height: 4rem;
@@ -38,6 +54,7 @@ export const Detail = styled(motion.div)`
   width: 9rem;
 
   svg {
+    color: #f9f9f9;
     font-size: 1.75rem;
   }
 `;
@@ -48,7 +65,7 @@ export const Wrapper = styled(motion.div)`
   flex-flow: column;
   gap: 1rem;
   justify-content: center;
-  margin-left: 32rem;
+  margin-left: 34rem;
   margin-top: 2rem;
   position: absolute;
 `;
