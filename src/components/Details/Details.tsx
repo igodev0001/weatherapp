@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, Variants } from 'framer-motion';
 import { BiWind } from 'react-icons/bi';
 import { BsCloudLightningRainFill } from 'react-icons/bs';
@@ -24,17 +24,30 @@ const childrenVariants: Variants = {
 
 export default function Details() {
   const [showDetails, setShowDetails] = useState(false);
+  const [showAction, setShowAction] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAction(true);
+    }, 800);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <>
-      <S.Action
-        initial={{ scale: 0 }}
-        animate={{ scale: 1, transition: { delay: 1 } }}
-        whileTap={{ scale: 0.8 }}
-        onClick={() => setShowDetails((prevState) => !prevState)}
-      >
-        <TbListDetails />
-      </S.Action>
+      {showAction && (
+        <S.Action
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileTap={{ scale: 0.8 }}
+          onClick={() => setShowDetails((prevState) => !prevState)}
+        >
+          <TbListDetails />
+        </S.Action>
+      )}
 
       <AnimatePresence>
         {showDetails && (
@@ -46,7 +59,7 @@ export default function Details() {
           >
             <S.Detail variants={childrenVariants}>
               <S.Content>
-                <h5>Vento</h5>
+                <h5>Wind</h5>
                 <h3>17km/h</h3>
               </S.Content>
               <BiWind />
@@ -54,7 +67,7 @@ export default function Details() {
 
             <S.Detail variants={childrenVariants}>
               <S.Content>
-                <h5>Umidade</h5>
+                <h5>Umidity</h5>
                 <h3>31%</h3>
               </S.Content>
               <MdOutlineWaterDrop />
@@ -62,7 +75,7 @@ export default function Details() {
 
             <S.Detail variants={childrenVariants}>
               <S.Content>
-                <h5>Chuva</h5>
+                <h5>Rain</h5>
                 <h3>10%</h3>
               </S.Content>
               <BsCloudLightningRainFill />

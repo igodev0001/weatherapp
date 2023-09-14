@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Action = styled(motion.button)`
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #2a2a2a;
   border: none;
   border-radius: 100%;
   display: flex;
@@ -17,7 +17,7 @@ export const Action = styled(motion.button)`
   z-index: 10;
 
   svg {
-    color: #131313;
+    color: #f9f9f9;
     font-size: 1.25rem;
   }
 
@@ -34,13 +34,14 @@ export const Content = styled.div`
 
   h3,
   h5 {
+    color: #b9d2f6;
     height: 1.25rem;
   }
 `;
 
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #a6bde0;
+  background-color: #2a2a2a;
   border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
@@ -53,6 +54,7 @@ export const Detail = styled(motion.div)`
   width: 9rem;
 
   svg {
+    color: #f9f9f9;
     font-size: 1.75rem;
   }
 `;

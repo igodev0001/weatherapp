@@ -8,8 +8,8 @@ export const Overall = createGlobalStyle`
   }
 
   body {
-    background-color: #B9D2F6;
-    color: #131313;
+    background-color: #b9d2f6;
+    color: #2a2a2a;
     font-family: Nunito, Ubuntu, sans-serif;
     height: 100vh;
   }

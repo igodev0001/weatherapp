@@ -44,7 +44,7 @@ export const SearchBtn = styled(motion.button)`
   width: 15%;
 
   svg {
-    color: #131313;
+    color: #2a2a2a;
     font-size: 1.5rem;
   }
 
