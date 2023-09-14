@@ -21,21 +21,21 @@ export const Input = styled.input`
   background: none;
   border: none;
   color: #131313;
-  font-family: Nunito;
-  font-weight: 800;
+  font-family: Nunito, Ubuntu, sans-serif;
   font-size: 1rem;
+  font-weight: 800;
   height: 2.5rem;
-  padding: 0.75rem;
   outline: none;
+  padding: 0.75rem;
   width: 80%;
 `;
 
 export const SearchBtn = styled.button`
   align-items: center;
-  display: flex;
   background: none;
-  border-radius: 0 0.5rem 0.5rem 0;
   border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
   flex-flow: column;
   height: 100%;
   justify-content: center;
@@ -49,8 +49,8 @@ export const SearchBtn = styled.button`
   }
 
   &:hover {
-    cursor: pointer;
     background-color: #99adcc;
+    cursor: pointer;
     transition: 0.2s background-color;
   }
 `;
