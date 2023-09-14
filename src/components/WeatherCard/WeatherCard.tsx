@@ -14,7 +14,7 @@ export default function WeatherCard() {
           opacity: 1,
           x: 0,
           scale: 1,
-          transition: { delay: 0.4 },
+          transition: { delay: 0.2 },
         }}
       />
 

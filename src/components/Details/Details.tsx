@@ -29,7 +29,7 @@ export default function Details() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowAction(true);
-    }, 800);
+    }, 1500);
 
     return () => {
       clearTimeout(timeout);
