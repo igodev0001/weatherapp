@@ -23,7 +23,7 @@ export const Input = styled.input`
   color: #131313;
   font-family: Nunito, Ubuntu, sans-serif;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   height: 2.5rem;
   outline: none;
   padding: 0.75rem;
