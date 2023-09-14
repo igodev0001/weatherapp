@@ -20,9 +20,13 @@ export const Action = styled(motion.button)`
     color: #131313;
     font-size: 1.25rem;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   align-items: center;
   display: flex;
   flex-flow: column;
