@@ -34,9 +34,12 @@ export const Container = styled.div`
 
 export const Location = styled.h2`
   bottom: 4rem;
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   position: absolute;
+  text-align: center;
+  width: 80%;
+  word-wrap: break-word;
 `;
 
 export const Temperature = styled.h1`
