@@ -8,17 +8,17 @@ export const Action = styled(motion.button)`
   border-radius: 100%;
   display: flex;
   flex-flow: column;
-  height: 2rem;
+  height: 2.5rem;
   justify-content: center;
   margin-top: 2rem;
   margin-left: 20rem;
   position: absolute;
-  width: 2rem;
+  width: 2.5rem;
   z-index: 10;
 
   svg {
     color: #131313;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 
