@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TbListDetails } from 'react-icons/tb';
 
 import * as S from './styled';
 
@@ -7,15 +8,19 @@ export default function Details() {
 
   return (
     <>
-      <S.Action onClick={() => setShowDetails((prevState) => !prevState)} />
+      <S.Action
+        whileTap={{ scale: 0.8 }}
+        onClick={() => setShowDetails((prevState) => !prevState)}
+      >
+        <TbListDetails />
+      </S.Action>
 
       {showDetails && (
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-          numquam voluptates repellendus est reiciendis neque, aperiam
-          molestias, ratione dolores porro voluptate delectus eveniet earum,
-          exercitationem assumenda error vitae hic.
-        </span>
+        <S.Wrapper>
+          <S.Container />
+          <S.Container />
+          <S.Container />
+        </S.Wrapper>
       )}
     </>
   );
