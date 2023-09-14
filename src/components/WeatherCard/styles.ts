@@ -55,6 +55,7 @@ export const Texture = styled(motion.img)`
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  user-select: none;
   width: 150%;
   z-index: -10;
 `;
