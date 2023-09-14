@@ -20,7 +20,9 @@ export const Container = styled(motion.div)`
 export const Input = styled.input`
   background: none;
   border: none;
-  font-weight: 400;
+  color: #131313;
+  font-family: Nunito;
+  font-weight: 800;
   font-size: 1rem;
   height: 2.5rem;
   padding: 0.75rem;
