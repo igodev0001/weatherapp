@@ -18,6 +18,7 @@ export const AppWrapper = styled.main`
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   height: 100vh;
   justify-content: center;
   width: 100%;
