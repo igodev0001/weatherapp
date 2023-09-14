@@ -26,6 +26,22 @@ export const Action = styled(motion.button)`
   }
 `;
 
+export const Detail = styled(motion.div)`
+  align-items: center;
+  background-color: #99adcc;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  height: 4rem;
+  justify-content: start;
+  padding: 0.75rem;
+  width: 9rem;
+
+  svg {
+    font-size: 1.75rem;
+  }
+`;
+
 export const Wrapper = styled(motion.div)`
   align-items: center;
   display: flex;
@@ -35,12 +51,4 @@ export const Wrapper = styled(motion.div)`
   margin-left: 32rem;
   margin-top: 2rem;
   position: absolute;
-  z-index: 10;
-`;
-
-export const Container = styled(motion.div)`
-  background-color: #99adcc;
-  border-radius: 0.5rem;
-  height: 4rem;
-  width: 8rem;
 `;
