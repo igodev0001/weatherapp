@@ -8,7 +8,7 @@ export const Average = styled.h3`
   top: 55%;
 `;
 
-export const Clouds = styled.img`
+export const Clouds = styled(motion.img)`
   height: 4rem;
   left: -3rem;
   position: absolute;

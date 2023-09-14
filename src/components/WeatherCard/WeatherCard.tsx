@@ -7,7 +7,15 @@ import * as S from './styles';
 export default function WeatherCard() {
   return (
     <S.Wrapper>
-      <S.Clouds src={clouds} />
+      <S.Clouds
+        src={clouds}
+        initial={{ opacity: 0, x: -40 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 0.4 },
+        }}
+      />
 
       <S.Container
         initial={{ scale: 0 }}
