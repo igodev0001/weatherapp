@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { AnimatePresence, Variants } from 'framer-motion';
-import { TbListDetails, TbWindmill } from 'react-icons/tb';
-import { BsFillCloudLightningRainFill } from 'react-icons/bs';
-import { IoMdWater } from 'react-icons/io';
+import { BiWind } from 'react-icons/bi';
+import { BsCloudLightningRainFill } from 'react-icons/bs';
+import { MdOutlineWaterDrop } from 'react-icons/md';
+import { TbListDetails } from 'react-icons/tb';
 
 import * as S from './styled';
 
@@ -42,27 +43,27 @@ export default function Details() {
             variants={rootVariants}
           >
             <S.Detail variants={childrenVariants}>
-              <TbWindmill />
               <div>
                 <h5>Vento</h5>
                 <h3>17km/h</h3>
               </div>
+              <BiWind />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <IoMdWater />
               <div>
                 <h5>Umidade</h5>
                 <h3>31%</h3>
               </div>
+              <MdOutlineWaterDrop />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
-              <BsFillCloudLightningRainFill />
               <div>
                 <h5>Chuva</h5>
                 <h3>10%</h3>
               </div>
+              <BsCloudLightningRainFill />
             </S.Detail>
           </S.Wrapper>
         )}

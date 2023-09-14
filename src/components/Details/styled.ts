@@ -33,7 +33,7 @@ export const Detail = styled(motion.div)`
   display: flex;
   gap: 1rem;
   height: 4rem;
-  justify-content: start;
+  justify-content: space-between;
   padding: 0.75rem;
   width: 9rem;
 
