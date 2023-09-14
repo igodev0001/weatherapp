@@ -1,0 +1,19 @@
+on: push
+
+jobs:
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifying Git Repository
+        uses: actions/checkout@v2
+
+      - name: Installing Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Installing Dependencies
+        run: npm i
+
+      - name: Running Stylelint
+        run: npm run lint:styles
