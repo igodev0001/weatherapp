@@ -5,7 +5,7 @@ import { BsCloudLightningRainFill } from 'react-icons/bs';
 import { MdOutlineWaterDrop } from 'react-icons/md';
 import { TbListDetails } from 'react-icons/tb';
 
-import * as S from './styled';
+import * as S from './styles';
 
 const rootVariants: Variants = {
   initial: { opacity: 0 },

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Action = styled(motion.button)`
   align-items: center;
-  background-color: '#fff';
+  background-color: #f6f6f6;
   border: none;
   border-radius: 100%;
   display: flex;
@@ -28,8 +28,11 @@ export const Action = styled(motion.button)`
 
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #99adcc;
+  background-color: #f6f6f6;
   border-radius: 0.5rem;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -2px rgb(0 0 0 / 10%);
   display: flex;
   gap: 1rem;
   height: 4rem;
@@ -48,7 +51,7 @@ export const Wrapper = styled(motion.div)`
   flex-flow: column;
   gap: 1rem;
   justify-content: center;
-  margin-left: 32rem;
+  margin-left: 34rem;
   margin-top: 2rem;
   position: absolute;
 `;
