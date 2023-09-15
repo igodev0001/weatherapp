@@ -21,8 +21,6 @@ function App() {
     },
   });
 
-  console.log(response?.data);
-
   return (
     <S.AppWrapper>
       <SearchBar handleSearch={mutate} />
