@@ -10,7 +10,7 @@ import * as S from './global.styles';
 function App() {
   const queryClient = useQueryClient();
 
-  const { data } = useQuery({
+  const { data: response } = useQuery({
     queryKey: 'weather',
     queryFn: getWeather,
   });
@@ -25,7 +25,7 @@ function App() {
     <S.AppWrapper>
       <SearchBar handleSearch={mutate} />
       <Details />
-      <WeatherCard />
+      <WeatherCard data={response?.data} />
     </S.AppWrapper>
   );
 }

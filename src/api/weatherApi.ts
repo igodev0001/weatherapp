@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-type WeatherProps = {
+export type WeatherProps = {
   coord: {
     lon: number;
     lat: number;
