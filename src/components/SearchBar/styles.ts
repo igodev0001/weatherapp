@@ -49,7 +49,7 @@ export const SearchBtn = styled(motion.button)`
   }
 
   &:hover {
-    background-color: #99adcc;
+    background-color: ${({ theme }) => theme.colors.secundary};
     cursor: pointer;
     transition: 0.2s background-color;
   }
