@@ -33,6 +33,7 @@ export default function Details({ data }: DetailsProps) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowAction(true);
+      setShowDetails(true);
     }, 1500);
 
     return () => {
