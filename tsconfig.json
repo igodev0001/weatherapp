@@ -9,7 +9,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@constants/*": ["src/constants/*"],
       "@data/*": ["src/data/*"],
-      "@api/*": ["src/api/*"]
+      "@api/*": ["src/api/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "module": "ESNext",
     "target": "ES2022",
