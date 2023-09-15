@@ -27,21 +27,23 @@ export const Action = styled(motion.button)`
 `;
 
 export const Content = styled.div`
-  align-items: start;
+  align-items: flex-start;
+  color: ${({ theme }) => theme.colors.contrast};
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 
   h3,
   h5 {
-    color: #2a2a2a;
-    height: 1.25rem;
+    align-items: flex-end;
+    display: flex;
+    height: 1.5rem;
   }
 `;
 
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #f9f9f990;
+  background-color: #2a2a2a;
   border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
@@ -58,12 +60,12 @@ export const Detail = styled(motion.div)`
   width: 8.5rem;
 
   svg {
-    color: #2a2a2a;
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 1.75rem;
   }
 
   &:hover {
-    background-color: #f9f9f960;
+    background-color: #13131399;
     transition: 0.2s background-color;
   }
 `;
