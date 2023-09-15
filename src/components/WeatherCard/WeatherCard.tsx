@@ -1,10 +1,15 @@
 import React from 'react';
 import cloudTexture from '@assets/images/cloud_texture.png';
 import clouds from '@assets/svgs/clouds.svg';
+import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
 
-export default function WeatherCard() {
+type WeatherCardProps = {
+  data: WeatherProps;
+};
+
+export default function WeatherCard({ data }: WeatherCardProps) {
   return (
     <S.Wrapper>
       <S.Clouds
@@ -22,9 +27,11 @@ export default function WeatherCard() {
         initial={{ scale: 0, y: 1000 }}
         animate={{ scale: 1, y: 0, transition: { delay: 0.2 } }}
       >
-        <S.Temperature>60º</S.Temperature>
-        <S.Average>58º / 61º</S.Average>
-        <S.Location>Recife, PE</S.Location>
+        <S.Temperature>{`${Math.round(data?.main.temp)}º`}</S.Temperature>
+        <S.Average>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
+          data?.main.temp_max,
+        )}º`}</S.Average>
+        <S.Location>{`${data?.name}, ${data?.sys.country}`}</S.Location>
 
         <S.Texture
           whileInView={{

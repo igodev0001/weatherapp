@@ -5,10 +5,11 @@ export const Overall = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
   }
 
   body {
-    background-color: #b9d2f6;
+    background-color: #b9d2f6; // eea791 // b9d2f6
     color: #2a2a2a;
     font-family: Nunito, Ubuntu, sans-serif;
     height: 100vh;

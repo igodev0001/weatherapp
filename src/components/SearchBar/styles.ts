@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Container = styled(motion.div)`
+export const Container = styled(motion.form)`
   align-items: center;
   background-color: #99adcc;
   border-radius: 0.5rem;
