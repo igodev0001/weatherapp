@@ -10,6 +10,14 @@ type SearchBarProps = {
 export default function SearchBar({ handleSearch }: SearchBarProps) {
   const searchInput = useRef(null);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { current } = searchInput;
+
+    handleSearch(current?.value);
+  };
+
   return (
     <S.Container
       initial={{ scaleX: 0 }}
@@ -17,12 +25,13 @@ export default function SearchBar({ handleSearch }: SearchBarProps) {
         scaleX: 1,
         transition: { delay: 0.6, duration: 0.4, type: 'spring', bounce: 0.35 },
       }}
+      onSubmit={handleSubmit}
     >
       <S.Input type="text" ref={searchInput} />
       <S.SearchBtn
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        onClick={() => handleSearch(searchInput.current?.value)}
+        onClick={handleSubmit}
       >
         <BiSearch />
       </S.SearchBtn>
