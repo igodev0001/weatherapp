@@ -62,27 +62,30 @@ export default function Details({ data }: DetailsProps) {
             exit="exit"
             variants={rootVariants}
           >
-            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
+            <S.Detail variants={childrenVariants}>
               <S.Content>
                 <h5>Wind</h5>
                 <h3>{`${Math.round(data?.wind.speed)}km/h`}</h3>
               </S.Content>
+
               <BiWind />
             </S.Detail>
 
-            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
+            <S.Detail variants={childrenVariants}>
               <S.Content>
                 <h5>Umidity</h5>
                 <h3>{`${data?.main.humidity}%`}</h3>
               </S.Content>
+
               <BiSolidDroplet />
             </S.Detail>
 
-            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
+            <S.Detail variants={childrenVariants}>
               <S.Content>
                 <h5>Clouds</h5>
                 <h3>{`${data?.clouds.all}%`}</h3>
               </S.Content>
+
               <BsCloudsFill />
             </S.Detail>
           </S.Wrapper>

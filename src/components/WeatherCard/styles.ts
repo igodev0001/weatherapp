@@ -18,7 +18,6 @@ export const Clouds = styled(motion.img)`
 
 export const Container = styled(motion.div)`
   align-items: center;
-  background-color: #d9d9d9;
   border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),

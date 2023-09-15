@@ -41,18 +41,27 @@ export const Content = styled.div`
 
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #9fb5d5;
+  background-color: #f9f9f990;
   border-radius: 0.5rem;
   display: flex;
   gap: 1rem;
   height: 4rem;
   justify-content: space-between;
+  overflow: hidden;
   padding: 1rem;
+  padding-right: 0.75rem;
+  position: relative;
+  transition: 0.2s background-color;
   width: 8.5rem;
 
   svg {
-    color: #f9f9f9;
+    color: #2a2a2a;
     font-size: 1.75rem;
+  }
+
+  &:hover {
+    background-color: #f9f9f960;
+    transition: 0.2s background-color;
   }
 `;
 
