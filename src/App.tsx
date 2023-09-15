@@ -28,13 +28,13 @@ function App() {
   }, [response, handleTheme]);
 
   return (
-    <S.AppWrapper>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <S.AppWrapper>
         <SearchBar handleSearch={mutate} />
         <WeatherCard data={response?.data} />
         <Details data={response?.data} />
-      </ThemeProvider>
-    </S.AppWrapper>
+      </S.AppWrapper>
+    </ThemeProvider>
   );
 }
 

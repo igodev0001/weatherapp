@@ -9,7 +9,6 @@ export const Overall = createGlobalStyle`
   }
 
   body {
-    background-color: #b9d2f6;
     color: #2a2a2a;
     font-family: Nunito, Ubuntu, sans-serif;
     height: 100vh;
@@ -19,10 +18,12 @@ export const Overall = createGlobalStyle`
 
 export const AppWrapper = styled.main`
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   height: 100vh;
   justify-content: center;
+  transition: 0.8s background-color;
   width: 100%;
 `;
