@@ -34,24 +34,21 @@ export const Content = styled.div`
 
   h3,
   h5 {
-    color: #b9d2f6;
+    color: #2a2a2a;
     height: 1.25rem;
   }
 `;
 
 export const Detail = styled(motion.div)`
   align-items: center;
-  background-color: #2a2a2a;
+  background-color: #9fb5d5;
   border-radius: 0.5rem;
-  box-shadow:
-    0 4px 6px -1px rgb(0 0 0 / 10%),
-    0 2px 4px -2px rgb(0 0 0 / 10%);
   display: flex;
   gap: 1rem;
   height: 4rem;
   justify-content: space-between;
-  padding: 0.75rem;
-  width: 9rem;
+  padding: 1rem;
+  width: 8.5rem;
 
   svg {
     color: #f9f9f9;

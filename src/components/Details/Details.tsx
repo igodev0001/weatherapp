@@ -21,9 +21,9 @@ const rootVariants: Variants = {
 };
 
 const childrenVariants: Variants = {
-  initial: { x: -20, opacity: 0 },
+  initial: { x: -30, opacity: 0 },
   animate: { x: 0, opacity: 1 },
-  exit: { x: -20, opacity: 0 },
+  exit: { x: -30, opacity: 0 },
 };
 
 export default function Details({ data }: DetailsProps) {
@@ -62,15 +62,15 @@ export default function Details({ data }: DetailsProps) {
             exit="exit"
             variants={rootVariants}
           >
-            <S.Detail variants={childrenVariants}>
+            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
               <S.Content>
                 <h5>Wind</h5>
-                <h3>{`${data?.wind.speed}km/h`}</h3>
+                <h3>{`${Math.round(data?.wind.speed)}km/h`}</h3>
               </S.Content>
               <BiWind />
             </S.Detail>
 
-            <S.Detail variants={childrenVariants}>
+            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
               <S.Content>
                 <h5>Umidity</h5>
                 <h3>{`${data?.main.humidity}%`}</h3>
@@ -78,7 +78,7 @@ export default function Details({ data }: DetailsProps) {
               <BiSolidDroplet />
             </S.Detail>
 
-            <S.Detail variants={childrenVariants}>
+            <S.Detail variants={childrenVariants} whileHover={{ scale: 1.1 }}>
               <S.Content>
                 <h5>Clouds</h5>
                 <h3>{`${data?.clouds.all}%`}</h3>
