@@ -21,11 +21,13 @@ function App() {
     },
   });
 
+  console.log(response?.data);
+
   return (
     <S.AppWrapper>
       <SearchBar handleSearch={mutate} />
-      <Details />
       <WeatherCard data={response?.data} />
+      <Details data={response?.data} />
     </S.AppWrapper>
   );
 }

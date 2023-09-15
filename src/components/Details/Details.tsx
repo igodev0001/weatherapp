@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, Variants } from 'framer-motion';
-import { BiWind } from 'react-icons/bi';
-import { BsCloudLightningRainFill } from 'react-icons/bs';
-import { MdOutlineWaterDrop } from 'react-icons/md';
+import { BiWind, BiSolidDroplet } from 'react-icons/bi';
+import { BsCloudsFill } from 'react-icons/bs';
 import { TbListDetails } from 'react-icons/tb';
+import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
+
+type DetailsProps = {
+  data: WeatherProps;
+};
 
 const rootVariants: Variants = {
   initial: { opacity: 0 },
@@ -22,7 +26,7 @@ const childrenVariants: Variants = {
   exit: { x: -20, opacity: 0 },
 };
 
-export default function Details() {
+export default function Details({ data }: DetailsProps) {
   const [showDetails, setShowDetails] = useState(false);
   const [showAction, setShowAction] = useState(false);
 
@@ -61,7 +65,7 @@ export default function Details() {
             <S.Detail variants={childrenVariants}>
               <S.Content>
                 <h5>Wind</h5>
-                <h3>17km/h</h3>
+                <h3>{`${data?.wind.speed}km/h`}</h3>
               </S.Content>
               <BiWind />
             </S.Detail>
@@ -69,17 +73,17 @@ export default function Details() {
             <S.Detail variants={childrenVariants}>
               <S.Content>
                 <h5>Umidity</h5>
-                <h3>31%</h3>
+                <h3>{`${data?.main.humidity}%`}</h3>
               </S.Content>
-              <MdOutlineWaterDrop />
+              <BiSolidDroplet />
             </S.Detail>
 
             <S.Detail variants={childrenVariants}>
               <S.Content>
-                <h5>Rain</h5>
-                <h3>10%</h3>
+                <h5>Clouds</h5>
+                <h3>{`${data?.clouds.all}%`}</h3>
               </S.Content>
-              <BsCloudLightningRainFill />
+              <BsCloudsFill />
             </S.Detail>
           </S.Wrapper>
         )}
