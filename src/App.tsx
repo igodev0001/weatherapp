@@ -11,12 +11,14 @@ import * as S from './global.styles';
 
 function App() {
   const { theme, handleTheme } = useCustomTheme();
+
   const queryClient = useQueryClient();
-  const { data: response } = useQuery({
+
+  const { data: response, isLoading } = useQuery({
     queryKey: 'weather',
     queryFn: getWeather,
   });
-  const { mutate } = useMutation({
+  const { mutate, isLoading: mutateLoading } = useMutation({
     mutationFn: getWeatherByCity,
     onSuccess: (mutationData) => {
       queryClient.setQueryData('weather', mutationData);
@@ -31,7 +33,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <S.AppWrapper>
         <SearchBar handleSearch={mutate} />
-        <WeatherCard data={response?.data} />
+        <WeatherCard
+          data={response?.data}
+          isLoading={isLoading || mutateLoading}
+        />
         <Details data={response?.data} />
       </S.AppWrapper>
     </ThemeProvider>

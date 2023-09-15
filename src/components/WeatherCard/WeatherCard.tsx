@@ -1,15 +1,17 @@
 import React from 'react';
+import { BiLoaderAlt } from 'react-icons/bi';
+import { WeatherProps } from '@api/weatherApi';
 import cloudTexture from '@assets/images/cloud_texture.png';
 import clouds from '@assets/svgs/clouds.svg';
-import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
 
 type WeatherCardProps = {
   data: WeatherProps;
+  isLoading: boolean;
 };
 
-export default function WeatherCard({ data }: WeatherCardProps) {
+export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
   return (
     <S.Wrapper>
       <S.Clouds
@@ -27,11 +29,30 @@ export default function WeatherCard({ data }: WeatherCardProps) {
         initial={{ scale: 0, y: 1000 }}
         animate={{ scale: 1, y: 0, transition: { delay: 0.2 } }}
       >
-        <S.Temperature>{`${Math.round(data?.main.temp)}º`}</S.Temperature>
-        <S.Average>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
-          data?.main.temp_max,
-        )}º`}</S.Average>
-        <S.Location>{`${data?.name}, ${data?.sys.country}`}</S.Location>
+        {isLoading ? (
+          <S.Loading
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            whileInView={{
+              rotate: '360deg',
+              transition: {
+                repeat: Infinity,
+                repeatType: 'loop',
+                ease: 'linear',
+              },
+            }}
+          >
+            <BiLoaderAlt />
+          </S.Loading>
+        ) : (
+          <>
+            <S.Temperature>{`${Math.round(data?.main.temp)}º`}</S.Temperature>
+            <S.Average>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
+              data?.main.temp_max,
+            )}º`}</S.Average>
+            <S.Location>{`${data?.name}, ${data?.sys.country}`}</S.Location>
+          </>
+        )}
 
         <S.Texture
           whileInView={{

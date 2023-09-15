@@ -31,6 +31,21 @@ export const Container = styled(motion.div)`
   width: 20rem;
 `;
 
+export const Loading = styled(motion.span)`
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+
+  svg {
+    color: #2a2a2a;
+    font-size: 2rem;
+  }
+`;
+
 export const Location = styled.h2`
   bottom: 4rem;
   font-size: 1.5rem;
