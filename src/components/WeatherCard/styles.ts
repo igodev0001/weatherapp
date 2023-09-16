@@ -10,7 +10,7 @@ export const Average = styled.h3`
   z-index: 10;
 `;
 
-export const Clouds = styled(motion.img)`
+export const WeatherIcon = styled(motion.img)`
   height: 4rem;
   left: -3rem;
   position: absolute;

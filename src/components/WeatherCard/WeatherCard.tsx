@@ -13,7 +13,7 @@ type WeatherCardProps = {
 export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
   return (
     <S.Wrapper>
-      <S.Clouds
+      <S.WeatherIcon
         src={clouds}
         initial={{ opacity: 0, x: -40, scale: 1.5 }}
         animate={{
