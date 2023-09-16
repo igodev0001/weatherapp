@@ -114,8 +114,8 @@ export const Temperature = styled.h1`
 `;
 
 export const WeatherIcon = styled.img`
-  position: absolute;
   margin-right: 0.15rem;
+  position: absolute;
   top: 8%;
   z-index: 20;
 `;
