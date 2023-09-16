@@ -41,7 +41,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Detail = styled(motion.div)`
+export const Container = styled(motion.div)`
   align-items: center;
   background-color: #2a2a2a;
   box-shadow:
