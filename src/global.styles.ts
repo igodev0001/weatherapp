@@ -27,13 +27,14 @@ export const AppWrapper = styled.main`
   width: 100%;
 
   &::after {
-    background-color: #d9d9d9;
+    background-color: ${({ theme }) => theme.colors.background};
     content: '';
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
+    transition: 0.8s background-color;
     z-index: 0;
   }
 `;
