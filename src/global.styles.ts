@@ -33,8 +33,8 @@ export const AppWrapper = styled.main`
     left: 0;
     position: fixed;
     top: 0;
-    width: 100%;
     transition: 0.8s background-color;
+    width: 100%;
     z-index: 0;
   }
 `;
