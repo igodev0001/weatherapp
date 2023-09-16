@@ -28,13 +28,13 @@ export default function SearchBar({ handleSearch }: SearchBarProps) {
       onSubmit={handleSubmit}
     >
       <S.Input type="text" ref={searchInput} />
-      <S.SearchBtn
+      <S.Button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         onClick={handleSubmit}
       >
         <BiSearch />
-      </S.SearchBtn>
+      </S.Button>
     </S.Container>
   );
 }

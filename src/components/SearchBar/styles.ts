@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 export const Container = styled(motion.form)`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.secundary};
-  border-radius: 0.5rem;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   transition: 0.8s background-color;
   width: 20rem;
+  z-index: 10;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.tertiary};
@@ -30,11 +30,10 @@ export const Input = styled.input`
   width: 90%;
 `;
 
-export const SearchBtn = styled(motion.button)`
+export const Button = styled(motion.button)`
   align-items: center;
   background: none;
   border: none;
-  border-radius: 0 0.5rem 0.5rem 0;
   display: flex;
   flex-flow: column;
   height: 100%;

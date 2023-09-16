@@ -1,22 +1,24 @@
 import React, { useEffect } from 'react';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
+import { ThemeProvider } from 'styled-components';
 import { getWeather, getWeatherByCity } from '@api/weatherApi';
 import useCustomTheme from '@hooks/useTheme';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
 import Details from '@components/Details';
 
-import { ThemeProvider } from 'styled-components';
 import * as S from './global.styles';
 
 function App() {
   const { theme, handleTheme } = useCustomTheme();
+
   const queryClient = useQueryClient();
-  const { data: response } = useQuery({
+
+  const { data: response, isLoading } = useQuery({
     queryKey: 'weather',
     queryFn: getWeather,
   });
-  const { mutate } = useMutation({
+  const { mutate, isLoading: mutateLoading } = useMutation({
     mutationFn: getWeatherByCity,
     onSuccess: (mutationData) => {
       queryClient.setQueryData('weather', mutationData);
@@ -31,7 +33,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <S.AppWrapper>
         <SearchBar handleSearch={mutate} />
-        <WeatherCard data={response?.data} />
+        <WeatherCard
+          data={response?.data}
+          isLoading={isLoading || mutateLoading}
+        />
         <Details data={response?.data} />
       </S.AppWrapper>
     </ThemeProvider>

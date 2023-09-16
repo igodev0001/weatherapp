@@ -7,7 +7,7 @@ import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
 
-type DetailsProps = {
+type ContainersProps = {
   data: WeatherProps;
 };
 
@@ -26,7 +26,7 @@ const childrenVariants: Variants = {
   exit: { x: -30, opacity: 0 },
 };
 
-export default function Details({ data }: DetailsProps) {
+export default function Containers({ data }: ContainersProps) {
   const [showDetails, setShowDetails] = useState(false);
   const [showAction, setShowAction] = useState(false);
 
@@ -63,32 +63,32 @@ export default function Details({ data }: DetailsProps) {
             exit="exit"
             variants={rootVariants}
           >
-            <S.Detail variants={childrenVariants}>
+            <S.Container variants={childrenVariants}>
               <S.Content>
                 <h5>Wind</h5>
                 <h3>{`${Math.round(data?.wind.speed)}km/h`}</h3>
               </S.Content>
 
               <BiWind />
-            </S.Detail>
+            </S.Container>
 
-            <S.Detail variants={childrenVariants}>
+            <S.Container variants={childrenVariants}>
               <S.Content>
                 <h5>Umidity</h5>
                 <h3>{`${data?.main.humidity}%`}</h3>
               </S.Content>
 
               <BiSolidDroplet />
-            </S.Detail>
+            </S.Container>
 
-            <S.Detail variants={childrenVariants}>
+            <S.Container variants={childrenVariants}>
               <S.Content>
                 <h5>Clouds</h5>
                 <h3>{`${data?.clouds.all}%`}</h3>
               </S.Content>
 
               <BsCloudsFill />
-            </S.Detail>
+            </S.Container>
           </S.Wrapper>
         )}
       </AnimatePresence>
