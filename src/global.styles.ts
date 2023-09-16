@@ -20,19 +20,20 @@ export const AppWrapper = styled.main`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
   height: 100vh;
   justify-content: center;
   transition: 0.8s background-color;
   width: 100%;
 
   &::after {
-    background-color: #d9d9d9;
+    background-color: ${({ theme }) => theme.colors.background};
     content: '';
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
+    transition: 0.8s background-color;
     width: 100%;
     z-index: 0;
   }

@@ -67,7 +67,6 @@ export const Container = styled(motion.div)`
 `;
 
 export const Description = styled.p`
-  border-bottom: 1px solid #2a2a2a;
   font-size: 1rem;
   font-weight: 600;
   max-width: 10rem;
