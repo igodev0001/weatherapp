@@ -1,7 +1,6 @@
 import React from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
 import { WeatherProps } from '@api/weatherApi';
-import cloudTexture from '@assets/images/cloud_texture.png';
 import clouds from '@assets/svgs/clouds.svg';
 
 import * as S from './styles';
@@ -53,20 +52,6 @@ export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
             <S.Location>{`${data?.name}, ${data?.sys.country}`}</S.Location>
           </>
         )}
-
-        <S.Texture
-          whileInView={{
-            scale: [1, 1.5, 1],
-            x: [0, 50, 0],
-            transition: {
-              duration: 30,
-              ease: 'easeInOut',
-              repeat: Infinity,
-              repeatType: 'loop',
-            },
-          }}
-          src={cloudTexture}
-        />
       </S.Container>
     </S.Wrapper>
   );

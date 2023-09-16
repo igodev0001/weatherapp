@@ -44,7 +44,6 @@ export const Content = styled.div`
 export const Detail = styled(motion.div)`
   align-items: center;
   background-color: #2a2a2a;
-  border-radius: 0.5rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
     0 2px 4px -2px rgb(0 0 0 / 10%);
@@ -56,12 +55,15 @@ export const Detail = styled(motion.div)`
   padding: 1rem;
   padding-right: 0.75rem;
   position: relative;
-  transition: 0.2s background-color;
+  transition:
+    0.2s background-color,
+    0.8s color;
   width: 8.5rem;
 
   svg {
     color: ${({ theme }) => theme.colors.primary};
     font-size: 1.75rem;
+    transition: 0.8s color;
   }
 
   &:hover {
@@ -79,4 +81,5 @@ export const Wrapper = styled(motion.div)`
   margin-left: 32.5rem;
   margin-top: 2rem;
   position: absolute;
+  z-index: 10;
 `;
