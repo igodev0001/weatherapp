@@ -70,11 +70,11 @@ export const Description = styled.p`
   border-bottom: 1px solid #2a2a2a;
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.5rem;
-  padding-bottom: 0.35rem;
+  max-width: 10rem;
+  padding: 0.25rem;
   position: absolute;
   text-align: center;
-  top: 20%;
+  top: 15%;
 `;
 
 export const Loading = styled(motion.span)`
@@ -116,7 +116,7 @@ export const Temperature = styled.h1`
 export const WeatherIcon = styled.img`
   margin-right: 0.15rem;
   position: absolute;
-  top: 8%;
+  top: 5%;
   z-index: 20;
 `;
 
