@@ -30,7 +30,7 @@ export const Input = styled.input`
   width: 90%;
 `;
 
-export const SearchBtn = styled(motion.button)`
+export const Button = styled(motion.button)`
   align-items: center;
   background: none;
   border: none;
