@@ -40,10 +40,12 @@ export const Container = styled(motion.div)`
         scale: 1;
         transform: translateX(0);
       }
+
       50% {
         scale: 1.5;
         transform: translateX(50);
       }
+
       100% {
         scale: 1;
         transform: translateX(0);
