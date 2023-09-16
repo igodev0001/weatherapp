@@ -10,7 +10,7 @@ export const Average = styled.h3`
   z-index: 10;
 `;
 
-export const WeatherIcon = styled(motion.img)`
+export const CloudsIcon = styled(motion.img)`
   height: 4rem;
   left: -3rem;
   position: absolute;
@@ -66,6 +66,17 @@ export const Container = styled(motion.div)`
   }
 `;
 
+export const Description = styled.p`
+  border-bottom: 1px solid #2a2a2a;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  padding-bottom: 0.35rem;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+`;
+
 export const Loading = styled(motion.span)`
   align-items: center;
   display: flex;
@@ -100,6 +111,13 @@ export const Temperature = styled.h1`
   position: absolute;
   top: 35%;
   z-index: 10;
+`;
+
+export const WeatherIcon = styled.img`
+  position: absolute;
+  margin-right: 0.15rem;
+  top: 8%;
+  z-index: 20;
 `;
 
 export const Wrapper = styled.div`

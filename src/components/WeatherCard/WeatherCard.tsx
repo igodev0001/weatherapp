@@ -13,15 +13,17 @@ type WeatherCardProps = {
 export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
   return (
     <S.Wrapper>
-      <S.WeatherIcon
+      <S.CloudsIcon
         src={clouds}
         initial={{ opacity: 0, x: -40, scale: 1.5 }}
         animate={{
           opacity: 1,
           x: 0,
           scale: 1,
-          transition: { delay: 0.2 },
+          transition: { delay: 0.8 },
         }}
+        drag
+        dragConstraints={{ bottom: 5, left: 5, right: 5, top: 5 }}
       />
 
       <S.Container
@@ -45,6 +47,11 @@ export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
           </S.Loading>
         ) : (
           <>
+            <S.WeatherIcon
+              src={`https://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}
+            />
+            <S.Description>{data?.weather[0].description}</S.Description>
+
             <S.Temperature>{`${Math.round(data?.main.temp)}º`}</S.Temperature>
             <S.Average>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
               data?.main.temp_max,
