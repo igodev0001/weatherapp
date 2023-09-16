@@ -70,11 +70,11 @@ export const Description = styled.p`
   border-bottom: 1px solid #2a2a2a;
   font-size: 1rem;
   font-weight: 600;
+  max-width: 10rem;
   padding: 0.25rem;
   position: absolute;
   text-align: center;
   top: 15%;
-  max-width: 10rem;
 `;
 
 export const Loading = styled(motion.span)`
