@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { ThemeProvider } from 'styled-components';
 import { getWeather, getWeatherByCity } from '@api/weatherApi';
 import useCustomTheme from '@hooks/useTheme';
+import useGeolocation from '@hooks/useGeolocation';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
 import Details from '@components/Details';
@@ -11,6 +12,7 @@ import * as S from './global.styles';
 
 function App() {
   const { theme, handleTheme } = useCustomTheme();
+  const { geolocation } = useGeolocation();
 
   const queryClient = useQueryClient();
 
