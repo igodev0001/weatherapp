@@ -70,10 +70,10 @@ export const Description = styled.p`
   border-bottom: 1px solid #2a2a2a;
   font-size: 1rem;
   font-weight: 600;
-  padding-bottom: 0.25rem;
+  padding: 0.25rem;
   position: absolute;
   text-align: center;
-  top: 18%;
+  top: 15%;
   max-width: 10rem;
 `;
 
@@ -116,7 +116,7 @@ export const Temperature = styled.h1`
 export const WeatherIcon = styled.img`
   margin-right: 0.15rem;
   position: absolute;
-  top: 8%;
+  top: 5%;
   z-index: 20;
 `;
 
