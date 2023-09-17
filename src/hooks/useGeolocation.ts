@@ -21,7 +21,7 @@ const useGeolocation = () => {
         );
       });
     }
-    return null;
+    return { lat: -8.0539, lon: -34.8811 };
   }, []);
 
   return { handleGeolocation };
