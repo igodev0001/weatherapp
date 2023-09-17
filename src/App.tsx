@@ -33,6 +33,8 @@ function App() {
     handleTheme(response?.data.main.temp);
   }, [response, handleTheme]);
 
+  console.log(response?.data);
+
   return (
     <ThemeProvider theme={theme}>
       <S.AppWrapper>

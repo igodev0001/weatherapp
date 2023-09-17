@@ -43,8 +43,9 @@ const getWeather = (
   return axios.get(
     `https://api.openweathermap.org/data/2.5/weather?lat=${
       geolocation.lat
-    }&lon=${geolocation.lon}
-      &appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=pt_br`,
+    }&lon=${geolocation.lon}&appid=${
+      import.meta.env.VITE_API_KEY
+    }&units=metric`,
   );
 };
 

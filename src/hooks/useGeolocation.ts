@@ -16,12 +16,12 @@ const useGeolocation = () => {
             resolve({ lat: latitude, lon: longitude });
           },
           () => {
-            resolve({ lat: -8.05224, lon: -34.928612 });
+            resolve({ lat: -8.0539, lon: -34.8811 });
           },
         );
       });
     }
-    return { lat: -8.05224, lon: -34.928612 };
+    return null;
   }, []);
 
   useEffect(() => {
