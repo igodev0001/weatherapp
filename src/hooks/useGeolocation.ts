@@ -1,33 +1,34 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect } from 'react';
 
-type GeolocationProps = {
+export type GeolocationProps = {
   lat: number | null;
   lon: number | null;
 };
 
 const useGeolocation = () => {
-  const [geolocation, setGeolocation] = useState<GeolocationProps>({
-    lat: null,
-    lon: null,
-  });
-
-  const handleGeolocation = useCallback(() => {
+  const handleGeolocation = useCallback(async (): Promise<GeolocationProps> => {
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((currPosition) => {
-        const { latitude, longitude } = currPosition.coords;
-        setGeolocation({
-          lat: latitude,
-          lon: longitude,
-        });
+      return new Promise((resolve) => {
+        navigator.geolocation.getCurrentPosition(
+          (currPosition) => {
+            const { latitude, longitude } = currPosition.coords;
+
+            resolve({ lat: latitude, lon: longitude });
+          },
+          () => {
+            resolve({ lat: -8.05224, lon: -34.928612 });
+          },
+        );
       });
     }
+    return { lat: -8.05224, lon: -34.928612 };
   }, []);
 
   useEffect(() => {
     handleGeolocation();
   }, [handleGeolocation]);
 
-  return { geolocation };
+  return { handleGeolocation };
 };
 
 export default useGeolocation;
