@@ -21,9 +21,9 @@ const rootVariants: Variants = {
 };
 
 const childrenVariants: Variants = {
-  initial: { x: -30, opacity: 0 },
+  initial: { x: -28, opacity: 0 },
   animate: { x: 0, opacity: 1 },
-  exit: { x: -30, opacity: 0 },
+  exit: { x: -28, opacity: 0 },
 };
 
 export default function Containers({ data }: ContainersProps) {

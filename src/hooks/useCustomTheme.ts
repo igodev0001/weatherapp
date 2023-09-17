@@ -5,7 +5,7 @@ const useCustomTheme = () => {
   const [theme, setTheme] = useState(cold);
 
   const handleTheme = (temperature: number) => {
-    setTheme(temperature > 30 ? hot : cold);
+    setTheme(temperature >= 30 ? hot : cold);
   };
 
   return { theme, handleTheme };

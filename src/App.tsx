@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { ThemeProvider } from 'styled-components';
 import { getWeather, getWeatherByCity } from '@api/weatherApi';
-import useCustomTheme from '@hooks/useTheme';
+import useCustomTheme from '@hooks/useCustomTheme';
 import useGeolocation from '@hooks/useGeolocation';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
