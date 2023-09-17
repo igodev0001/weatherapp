@@ -54,7 +54,7 @@ const getWeatherByCity = (
 ): Promise<AxiosResponse<WeatherProps>> => {
   return axios.get(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}
-    &appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=pt_br`,
+    &appid=${import.meta.env.VITE_API_KEY}&units=metric`,
   );
 };
 
