@@ -10,12 +10,12 @@ export const Average = styled.h3`
   z-index: 10;
 `;
 
-export const CloudsIcon = styled(motion.img)`
+export const CloudElement = styled(motion.img)`
   height: 4rem;
   left: -3rem;
   position: absolute;
   top: 4rem;
-  z-index: 20;
+  z-index: 30;
 `;
 
 export const Container = styled(motion.div)`
@@ -101,6 +101,14 @@ export const Location = styled.h2`
   width: 80%;
   word-wrap: break-word;
   z-index: 10;
+`;
+
+export const SunElement = styled(motion.img)`
+  height: 4rem;
+  left: -2rem;
+  position: absolute;
+  top: 4rem;
+  z-index: 20;
 `;
 
 export const Temperature = styled.h1`

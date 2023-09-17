@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
 import { WeatherProps } from '@api/weatherApi';
 import clouds from '@assets/svgs/clouds.svg';
+import sun from '@assets/svgs/sun.svg';
 
+import { AnimatePresence } from 'framer-motion';
 import * as S from './styles';
 
 type WeatherCardProps = {
@@ -11,9 +13,11 @@ type WeatherCardProps = {
 };
 
 export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
+  const [showSun, setShowSun] = useState(false);
+
   return (
     <S.Wrapper>
-      <S.CloudsIcon
+      <S.CloudElement
         src={clouds}
         initial={{ opacity: 0, x: -40, scale: 1.5 }}
         animate={{
@@ -22,9 +26,22 @@ export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
           scale: 1,
           transition: { delay: 0.8 },
         }}
+        onDragStart={() => setShowSun(true)}
+        onDragEnd={() => setShowSun(false)}
         drag
         dragConstraints={{ bottom: 5, left: 5, right: 5, top: 5 }}
       />
+
+      <AnimatePresence>
+        {showSun && (
+          <S.SunElement
+            src={sun}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+          />
+        )}
+      </AnimatePresence>
 
       <S.Container
         initial={{ scale: 0, y: 1000 }}

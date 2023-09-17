@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
+import { GeolocationProps } from '@hooks/useGeolocation';
 
 export type WeatherProps = {
   coord: {
@@ -36,10 +37,15 @@ export type WeatherProps = {
   name: string;
 };
 
-const getWeather = (): Promise<AxiosResponse<WeatherProps>> => {
+const getWeather = (
+  geolocation: GeolocationProps,
+): Promise<AxiosResponse<WeatherProps>> => {
   return axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=recife
-    &appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=pt_br`,
+    `https://api.openweathermap.org/data/2.5/weather?lat=${
+      geolocation.lat
+    }&lon=${geolocation.lon}&appid=${
+      import.meta.env.VITE_API_KEY
+    }&units=metric`,
   );
 };
 
@@ -48,7 +54,7 @@ const getWeatherByCity = (
 ): Promise<AxiosResponse<WeatherProps>> => {
   return axios.get(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}
-    &appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=pt_br`,
+    &appid=${import.meta.env.VITE_API_KEY}&units=metric`,
   );
 };
 
