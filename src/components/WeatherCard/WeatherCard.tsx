@@ -50,18 +50,18 @@ export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
         {isLoading ? (
           <Loading />
         ) : (
-          <>
-            <S.WeatherIcon
+          <S.Content>
+            <img
               src={`https://openweathermap.org/img/wn/${data?.weather[0].icon}.png`}
             />
-            <S.Description>{data?.weather[0].description}</S.Description>
+            <p>{data?.weather[0].description}</p>
 
-            <S.Temperature>{`${Math.round(data?.main.temp)}º`}</S.Temperature>
-            <S.Average>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
+            <h1>{`${Math.round(data?.main.temp)}º`}</h1>
+            <h3>{`${Math.round(data?.main.temp_min)}º / ${Math.round(
               data?.main.temp_max,
-            )}º`}</S.Average>
-            <S.Location>{`${data?.name}, ${data?.sys.country}`}</S.Location>
-          </>
+            )}º`}</h3>
+            <h2>{`${data?.name}, ${data?.sys.country}`}</h2>
+          </S.Content>
         )}
       </S.Container>
     </S.Wrapper>

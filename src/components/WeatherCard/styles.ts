@@ -2,14 +2,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import cloudTexture from '@assets/images/cloud_texture.png';
 
-export const Average = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
-  position: absolute;
-  top: 55%;
-  z-index: 10;
-`;
-
 export const CloudElement = styled(motion.img)`
   height: 4rem;
   left: -3rem;
@@ -70,25 +62,54 @@ export const Container = styled(motion.div)`
   }
 `;
 
-export const Description = styled.p`
-  font-size: 1rem;
-  font-weight: 600;
-  max-width: 10rem;
-  padding: 0.25rem;
-  position: absolute;
-  text-align: center;
-  top: 15%;
-`;
+export const Content = styled.div`
+  display: flex;
+  justify-content: center;
 
-export const Location = styled.h2`
-  bottom: 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  position: absolute;
-  text-align: center;
-  width: 80%;
-  word-wrap: break-word;
-  z-index: 10;
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left: 0.75rem;
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+  }
+
+  h2 {
+    bottom: 4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    word-wrap: break-word;
+    z-index: 10;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: absolute;
+    top: 55%;
+    z-index: 10;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 600;
+    max-width: 10rem;
+    padding: 0.25rem;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+  }
+
+  img {
+    margin-right: 0.15rem;
+    position: absolute;
+    top: 5%;
+    z-index: 20;
+  }
 `;
 
 export const SunElement = styled(motion.img)`
@@ -96,22 +117,6 @@ export const SunElement = styled(motion.img)`
   left: -2rem;
   position: absolute;
   top: 4rem;
-  z-index: 20;
-`;
-
-export const Temperature = styled.h1`
-  font-size: 4rem;
-  font-weight: 600;
-  margin-left: 0.75rem;
-  position: absolute;
-  top: 35%;
-  z-index: 10;
-`;
-
-export const WeatherIcon = styled.img`
-  margin-right: 0.15rem;
-  position: absolute;
-  top: 5%;
   z-index: 20;
 `;
 
