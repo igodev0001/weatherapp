@@ -16,6 +16,10 @@ export const CloudElement = styled(motion.img)`
   position: absolute;
   top: 4rem;
   z-index: 30;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Container = styled(motion.div)`
