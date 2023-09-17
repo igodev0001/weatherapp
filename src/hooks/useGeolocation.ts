@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 
 export type GeolocationProps = {
   lat: number | null;
@@ -23,10 +23,6 @@ const useGeolocation = () => {
     }
     return null;
   }, []);
-
-  useEffect(() => {
-    handleGeolocation();
-  }, [handleGeolocation]);
 
   return { handleGeolocation };
 };
