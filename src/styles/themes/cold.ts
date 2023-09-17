@@ -5,7 +5,7 @@ export default {
     secundary: '#99adcc',
     tertiary: '#74849b',
     accent: '#f9f9f990',
-    background: '#707b7f',
+    background: '#707e7f',
     contrast: '#f9f9f9',
     shade: '#2a2a2a',
   },

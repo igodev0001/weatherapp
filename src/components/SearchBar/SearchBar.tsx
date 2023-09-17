@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { FormEvent, useRef } from 'react';
 import { BiSearch } from 'react-icons/bi';
 
 import * as S from './styles';
@@ -10,7 +10,7 @@ type SearchBarProps = {
 export default function SearchBar({ handleSearch }: SearchBarProps) {
   const searchInput = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
     const { current } = searchInput;
