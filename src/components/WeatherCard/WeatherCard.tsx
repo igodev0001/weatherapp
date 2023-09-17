@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { BiLoaderAlt } from 'react-icons/bi';
+import { AnimatePresence } from 'framer-motion';
 import { WeatherProps } from '@api/weatherApi';
+import Loading from '@components/Loading';
 import clouds from '@assets/svgs/clouds.svg';
 import sun from '@assets/svgs/sun.svg';
 
-import { AnimatePresence } from 'framer-motion';
 import * as S from './styles';
 
 type WeatherCardProps = {
@@ -48,20 +48,7 @@ export default function WeatherCard({ data, isLoading }: WeatherCardProps) {
         animate={{ scale: 1, y: 0, transition: { delay: 0.2 } }}
       >
         {isLoading ? (
-          <S.Loading
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            whileInView={{
-              rotate: '360deg',
-              transition: {
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'linear',
-              },
-            }}
-          >
-            <BiLoaderAlt />
-          </S.Loading>
+          <Loading />
         ) : (
           <>
             <S.WeatherIcon
