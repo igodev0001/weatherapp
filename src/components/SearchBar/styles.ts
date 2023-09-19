@@ -31,6 +31,10 @@ export const Input = styled.input`
   outline: none;
   padding: 0.75rem;
   width: 90%;
+
+  &::placeholder {
+    color: #f9f9f950;
+  }
 `;
 
 export const Button = styled(motion.button)`
