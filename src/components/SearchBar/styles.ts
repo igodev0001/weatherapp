@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 export const Container = styled(motion.form)`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.secundary};
+  border-radius: 0.15rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
     0 2px 4px -2px rgb(0 0 0 / 10%);

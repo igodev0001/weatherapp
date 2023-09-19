@@ -14,7 +14,7 @@ export const Action = styled(motion.button)`
   margin-top: 2rem;
   position: absolute;
   width: 2.5rem;
-  z-index: 10;
+  z-index: 20;
 
   svg {
     color: #f9f9f9;
@@ -44,6 +44,7 @@ export const Content = styled.div`
 export const Container = styled(motion.div)`
   align-items: center;
   background-color: #2a2a2a;
+  border-radius: 0.15rem;
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
     0 2px 4px -2px rgb(0 0 0 / 10%);
