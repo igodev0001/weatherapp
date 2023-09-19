@@ -33,8 +33,7 @@ export default function Containers({ data }: ContainersProps) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowAction(true);
-      setShowDetails(true);
-    }, 1500);
+    }, 1250);
 
     return () => {
       clearTimeout(timeout);

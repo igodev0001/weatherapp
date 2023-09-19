@@ -16,7 +16,11 @@ function App() {
 
   const queryClient = useQueryClient();
 
-  const { data: response, isLoading } = useQuery({
+  const {
+    data: response,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: 'weather',
     queryFn: async () => {
       return getWeather(await handleGeolocation());
@@ -43,7 +47,7 @@ function App() {
           isLoading={isLoading || mutateLoading}
         />
 
-        <Details data={response?.data} />
+        {!isError && !isLoading && <Details data={response?.data} />}
       </S.AppWrapper>
     </ThemeProvider>
   );
