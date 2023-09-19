@@ -51,6 +51,13 @@ function App() {
         {!isError && !isLoading && <WeatherDetails data={response?.data} />}
 
         <Aside />
+
+        <S.WaterMark
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2 } }}
+        >
+          © Rafael Fernandes de Lima - All rights reserved.
+        </S.WaterMark>
       </S.AppWrapper>
     </ThemeProvider>
   );
