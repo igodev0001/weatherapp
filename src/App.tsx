@@ -7,6 +7,7 @@ import useGeolocation from '@hooks/useGeolocation';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
 import WeatherDetails from '@components/WeatherDetails';
+import Aside from '@components/Aside';
 
 import * as S from './global.styles';
 
@@ -48,6 +49,8 @@ function App() {
         />
 
         {!isError && !isLoading && <WeatherDetails data={response?.data} />}
+
+        <Aside />
       </S.AppWrapper>
     </ThemeProvider>
   );
