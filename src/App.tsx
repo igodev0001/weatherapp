@@ -6,7 +6,7 @@ import useCustomTheme from '@hooks/useCustomTheme';
 import useGeolocation from '@hooks/useGeolocation';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
-import Details from '@components/Details';
+import WeatherDetails from '@components/WeatherDetails';
 
 import * as S from './global.styles';
 
@@ -47,7 +47,7 @@ function App() {
           isLoading={isLoading || mutateLoading}
         />
 
-        {!isError && !isLoading && <Details data={response?.data} />}
+        {!isError && !isLoading && <WeatherDetails data={response?.data} />}
       </S.AppWrapper>
     </ThemeProvider>
   );

@@ -7,7 +7,7 @@ import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
 
-type ContainersProps = {
+type WeatherDetailsProps = {
   data: WeatherProps;
 };
 
@@ -26,7 +26,7 @@ const childrenVariants: Variants = {
   exit: { x: -28, opacity: 0 },
 };
 
-export default function Containers({ data }: ContainersProps) {
+export default function WeatherDetails({ data }: WeatherDetailsProps) {
   const [showDetails, setShowDetails] = useState(false);
   const [showAction, setShowAction] = useState(false);
 
