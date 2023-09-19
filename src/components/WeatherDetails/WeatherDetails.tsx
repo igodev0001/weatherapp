@@ -7,7 +7,7 @@ import { WeatherProps } from '@api/weatherApi';
 
 import * as S from './styles';
 
-type ContainersProps = {
+type WeatherDetailsProps = {
   data: WeatherProps;
 };
 
@@ -26,15 +26,14 @@ const childrenVariants: Variants = {
   exit: { x: -28, opacity: 0 },
 };
 
-export default function Containers({ data }: ContainersProps) {
+export default function WeatherDetails({ data }: WeatherDetailsProps) {
   const [showDetails, setShowDetails] = useState(false);
   const [showAction, setShowAction] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowAction(true);
-      setShowDetails(true);
-    }, 1500);
+    }, 1250);
 
     return () => {
       clearTimeout(timeout);
@@ -47,7 +46,7 @@ export default function Containers({ data }: ContainersProps) {
         <S.Action
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
           onClick={() => setShowDetails((prevState) => !prevState)}
         >

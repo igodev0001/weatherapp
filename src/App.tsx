@@ -6,7 +6,8 @@ import useCustomTheme from '@hooks/useCustomTheme';
 import useGeolocation from '@hooks/useGeolocation';
 import WeatherCard from '@components/WeatherCard';
 import SearchBar from '@components/SearchBar';
-import Details from '@components/Details';
+import WeatherDetails from '@components/WeatherDetails';
+import Aside from '@components/Aside';
 
 import * as S from './global.styles';
 
@@ -16,7 +17,11 @@ function App() {
 
   const queryClient = useQueryClient();
 
-  const { data: response, isLoading } = useQuery({
+  const {
+    data: response,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: 'weather',
     queryFn: async () => {
       return getWeather(await handleGeolocation());
@@ -43,7 +48,16 @@ function App() {
           isLoading={isLoading || mutateLoading}
         />
 
-        <Details data={response?.data} />
+        {!isError && !isLoading && <WeatherDetails data={response?.data} />}
+
+        <Aside />
+
+        <S.WaterMark
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 2 } }}
+        >
+          © Rafael Fernandes de Lima - All rights reserved.
+        </S.WaterMark>
       </S.AppWrapper>
     </ThemeProvider>
   );

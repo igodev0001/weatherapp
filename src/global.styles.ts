@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Overall = createGlobalStyle`
   * {
@@ -37,4 +38,14 @@ export const AppWrapper = styled.main`
     width: 100%;
     z-index: 0;
   }
+`;
+
+export const WaterMark = styled(motion.p)`
+  color: #9a9a9a80;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  transform: translate(-50%, -20%);
+  z-index: 10;
 `;

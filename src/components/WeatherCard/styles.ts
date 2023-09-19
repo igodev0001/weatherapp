@@ -121,6 +121,7 @@ export const SunElement = styled(motion.img)`
 `;
 
 export const Wrapper = styled.div`
+  margin-bottom: 2rem;
   position: relative;
   z-index: 10;
 `;
